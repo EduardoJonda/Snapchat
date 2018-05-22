@@ -6,6 +6,7 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -179,10 +180,10 @@
             </objects>
             <point key="canvasLocation" x="2501.25" y="4.225352112676056"/>
         </scene>
-        <!--View Controller-->
+        <!--Elegir Usuario View Controller-->
         <scene sceneID="bmC-6H-GRj">
             <objects>
-                <viewController id="JYR-x1-zee" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="JYR-x1-zee" customClass="ElegirUsuarioViewController" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cWE-g5-B5r"/>
                         <viewControllerLayoutGuide type="bottom" id="fXb-K7-OSe"/>
@@ -190,8 +191,23 @@
                     <view key="view" contentMode="scaleToFill" id="flm-nl-EEE">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="nRE-8t-g2O">
+                                <rect key="frame" x="16" y="64" width="288" height="504"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="fXb-K7-OSe" firstAttribute="top" secondItem="nRE-8t-g2O" secondAttribute="bottom" id="ZSl-rU-rC1"/>
+                            <constraint firstItem="nRE-8t-g2O" firstAttribute="top" secondItem="cWE-g5-B5r" secondAttribute="bottom" id="did-kY-iFT"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="nRE-8t-g2O" secondAttribute="trailing" id="gLY-gf-ZjQ"/>
+                            <constraint firstItem="nRE-8t-g2O" firstAttribute="leading" secondItem="flm-nl-EEE" secondAttribute="leadingMargin" id="hoA-wy-0De"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="TableView" destination="nRE-8t-g2O" id="ABl-QY-i0b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="agd-gf-0y1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

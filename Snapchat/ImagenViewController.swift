@@ -44,13 +44,26 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate, U
     
     @IBOutlet weak var elegirContactoBoton: UIButton!
     
-    @IBAction func elegirContactoBoton(_ sender: Any) {
-        performSegue(withIdentifier: "seleccionarContactoSegue", sender: nil)
+    @IBAction func elegirContactoTapped(_ sender: Any) {
+        //  performSegue(withIdentifier: "seleccionarContactoSegue", sender: Any)
+        elegirContactoBoton.isEnabled = false
+        
+        let storageRef = Storage.storage().reference()
+        let imagenesFolder = storageRef.child("imagenes")
+        let imagenData = UIImagePNGRepresentation(imageView.image!)!
+        
+        imagenesFolder.child("\(NSUUID().uuidString).jpg").put(imagenData, metadata: nil, completion:{(metadata, error) in
+            print("Intentando subir la imagen")
+            if error != nil {
+                print("Ocurriò un error:\(error)")
+            }
+        })
+        
         
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // let imagenesFolder = FIRASto
+ 
     }
     
     

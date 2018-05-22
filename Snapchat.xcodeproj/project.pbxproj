@@ -18,6 +18,7 @@
 		6282DC8320AF969900312B6B /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6282DC8220AF969900312B6B /* GoogleService-Info.plist */; };
 		6282DC8520AFA54F00312B6B /* ImagenViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 6282DC8420AFA54F00312B6B /* ImagenViewController.swift */; };
 		6282DC8820AFAA9D00312B6B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 6282DC8620AFAA9D00312B6B /* Main.storyboard */; };
+		62E0CC2F20B4DB230088B569 /* ElegirUsuarioViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 62E0CC2E20B4DB230088B569 /* ElegirUsuarioViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -58,6 +59,7 @@
 		6282DC8220AF969900312B6B /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6282DC8420AFA54F00312B6B /* ImagenViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ImagenViewController.swift; sourceTree = "<group>"; };
 		6282DC8720AFAA9D00312B6B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		62E0CC2E20B4DB230088B569 /* ElegirUsuarioViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ElegirUsuarioViewController.swift; sourceTree = "<group>"; };
 		A0D743B27019F16E3452475B /* Pods_SnapchatTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SnapchatTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		AB8663E2AD4B1DECC2772002 /* Pods_Snapchat.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Snapchat.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -123,6 +125,7 @@
 				6282DC8020AF90B500312B6B /* SnapsViewController.swift */,
 				6282DC8220AF969900312B6B /* GoogleService-Info.plist */,
 				6282DC8420AFA54F00312B6B /* ImagenViewController.swift */,
+				62E0CC2E20B4DB230088B569 /* ElegirUsuarioViewController.swift */,
 			);
 			path = Snapchat;
 			sourceTree = "<group>";
@@ -356,6 +359,7 @@
 				6282DC8520AFA54F00312B6B /* ImagenViewController.swift in Sources */,
 				626B49B620ACDA2100A1287C /* AppDelegate.swift in Sources */,
 				6282DC8120AF90B500312B6B /* SnapsViewController.swift in Sources */,
+				62E0CC2F20B4DB230088B569 /* ElegirUsuarioViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
