@@ -9,6 +9,7 @@
 import UIKit
 import Firebase
 import FirebaseAuth
+import FirebaseDatabase
 
 class iniciarSesionViewController: UIViewController {
     
@@ -25,16 +26,16 @@ class iniciarSesionViewController: UIViewController {
         Auth.auth().signIn(withEmail: emailTextField.text!, password: passwordTextField.text!, completion:  { (user, error) in
          print("Intentamos Iniciar Sesiòn")
             if error != nil {
-                print("Tenemos el siguiente error:\(error)")
+                print("Tenemos el siguiente error:\(String(describing: error))")
                 Auth.auth().createUser(withEmail: self.emailTextField.text!, password: self.passwordTextField.text!, completion: {(user, error) in
                     
                     if error != nil {
-                    print("Tenemos el siguiente error:\(error)")
+                    print("Tenemos el siguiente error:\(String(describing: error))")
                     
                 } else {
-                    
                     print("El usuario fue creado exitosamente")
-                        self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
+                    Database.database().reference().child("usuarios").child(user!.user.uid).child("email").setValue(user!.user.email)
+                    self.performSegue(withIdentifier: "iniciarsesionsegue", sender: nil)
                 }
                 })
             } else {

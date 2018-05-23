@@ -9,6 +9,7 @@
 import Foundation
 import UIKit
 import Firebase
+import FirebaseStorage
 
 class ImagenViewController: UIViewController, UIImagePickerControllerDelegate, UINavigationControllerDelegate {
     
@@ -52,7 +53,7 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate, U
         let imagenesFolder = storageRef.child("imagenes")
         let imagenData = UIImagePNGRepresentation(imageView.image!)!
         
-        imagenesFolder.child("\(NSUUID().uuidString).jpg").put(imagenData, metadata: nil, completion:{(metadata, error) in
+        imagenesFolder.child("\(NSUUID().uuidString).jpg").putData(imagenData, metadata: nil, completion:{(metadata, error) in
             print("Intentando subir la imagen")
             if error != nil {
                 print("Ocurriò un error:\(error)")

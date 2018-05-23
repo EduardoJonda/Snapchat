@@ -183,7 +183,7 @@
         <!--Elegir Usuario View Controller-->
         <scene sceneID="bmC-6H-GRj">
             <objects>
-                <viewController automaticallyAdjustsScrollViewInsets="NO" id="JYR-x1-zee" customClass="ElegirUsuarioViewController" sceneMemberID="viewController">
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="JYR-x1-zee" customClass="ElegirUsuarioViewController" customModule="Snapchat" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="cWE-g5-B5r"/>
                         <viewControllerLayoutGuide type="bottom" id="fXb-K7-OSe"/>
