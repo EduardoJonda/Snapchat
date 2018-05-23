@@ -146,8 +146,7 @@
                                 <rect key="frame" x="107" y="315" width="106" height="30"/>
                                 <state key="normal" title="Elegir Contacto"/>
                                 <connections>
-                                    <action selector="camaraTapped:" destination="cCt-C3-Dfx" eventType="touchUpInside" id="Pwk-6i-WP5"/>
-                                    <action selector="elegirContactoBoton:" destination="cCt-C3-Dfx" eventType="touchUpInside" id="arJ-Bp-ntO"/>
+                                    <action selector="elegirContactoTapped:" destination="cCt-C3-Dfx" eventType="touchUpInside" id="VaE-nJ-D9F"/>
                                     <segue destination="JYR-x1-zee" kind="show" identifier="seleccionarContactoSegue" id="fEf-dI-TMf"/>
                                 </connections>
                             </button>

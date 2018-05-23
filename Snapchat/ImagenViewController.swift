@@ -46,17 +46,17 @@ class ImagenViewController: UIViewController, UIImagePickerControllerDelegate, U
     @IBOutlet weak var elegirContactoBoton: UIButton!
     
     @IBAction func elegirContactoTapped(_ sender: Any) {
-        //  performSegue(withIdentifier: "seleccionarContactoSegue", sender: Any)
         elegirContactoBoton.isEnabled = false
         
-        let storageRef = Storage.storage().reference()
-        let imagenesFolder = storageRef.child("imagenes")
-        let imagenData = UIImagePNGRepresentation(imageView.image!)!
+        let imagenesFolder = Storage.storage().reference().child("imagenes")
+        let imagenData = UIImageJPEGRepresentation(imageView.image!, 0.1)!
         
-        imagenesFolder.child("\(NSUUID().uuidString).jpg").putData(imagenData, metadata: nil, completion:{(metadata, error) in
+        imagenesFolder.child("\(NSUUID().uuidString).jpg").putData(imagenData, metadata: nil, completion: { (metadata, error) in
             print("Intentando subir la imagen")
             if error != nil {
-                print("Ocurriò un error:\(error)")
+                print("Ocurriò un error:\(String(describing: error))")
+            } else {
+                self.performSegue(withIdentifier: "seleccionarContactoSegue", sender: nil)
             }
         })
         
